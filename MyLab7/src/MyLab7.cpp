@@ -212,4 +212,230 @@ SeatMgr::~SeatMgr()
 	}
 	delete[] seats;
 }
+/*
+//test_seat.txt
+7
+1A
+2A
+3A
+4A
+5A
+6A
+7A
+2B
+2C
+2D
+7D
+end
+
+// output
+Input from the console or an input file?(1 for console, 2 for file)
+1
+How many rows does the plane have?
+1
+1 A B C D
+Which seat would you like? (end to exit)
+1a
+Seat assigned
+1 X B C D
+Which seat would you like? (end to exit)
+1b
+Seat assigned
+1 X X C D
+Which seat would you like? (end to exit)
+1c
+Seat assigned
+1 X X X D
+Which seat would you like? (end to exit)
+1d
+Seat assigned
+Seat full exit
+
+
+Input from the console or an input file?(1 for console, 2 for file)
+1
+How many rows does the plane have?
+7
+1 A B C D
+2 A B C D
+3 A B C D
+4 A B C D
+5 A B C D
+6 A B C D
+7 A B C D
+Which seat would you like? (end to exit)
+1a
+Seat assigned
+1 X B C D
+2 A B C D
+3 A B C D
+4 A B C D
+5 A B C D
+6 A B C D
+7 A B C D
+Which seat would you like? (end to exit)
+2a
+Seat assigned
+1 X B C D
+2 X B C D
+3 A B C D
+4 A B C D
+5 A B C D
+6 A B C D
+7 A B C D
+Which seat would you like? (end to exit)
+3a
+Seat assigned
+1 X B C D
+2 X B C D
+3 X B C D
+4 A B C D
+5 A B C D
+6 A B C D
+7 A B C D
+Which seat would you like? (end to exit)
+4a
+Seat assigned
+1 X B C D
+2 X B C D
+3 X B C D
+4 X B C D
+5 A B C D
+6 A B C D
+7 A B C D
+Which seat would you like? (end to exit)
+4c
+Seat assigned
+1 X B C D
+2 X B C D
+3 X B C D
+4 X B X D
+5 A B C D
+6 A B C D
+7 A B C D
+Which seat would you like? (end to exit)
+4D
+Seat assigned
+1 X B C D
+2 X B C D
+3 X B C D
+4 X B X X
+5 A B C D
+6 A B C D
+7 A B C D
+Which seat would you like? (end to exit)
+end
+exit
+
+
+Input from the console or an input file?(1 for console, 2 for file)
+2
+Please input file name:
+test_seat.txt
+1 A B C D
+2 A B C D
+3 A B C D
+4 A B C D
+5 A B C D
+6 A B C D
+7 A B C D
+1A Seat assigned
+1 X B C D
+2 A B C D
+3 A B C D
+4 A B C D
+5 A B C D
+6 A B C D
+7 A B C D
+2A Seat assigned
+1 X B C D
+2 X B C D
+3 A B C D
+4 A B C D
+5 A B C D
+6 A B C D
+7 A B C D
+3A Seat assigned
+1 X B C D
+2 X B C D
+3 X B C D
+4 A B C D
+5 A B C D
+6 A B C D
+7 A B C D
+4A Seat assigned
+1 X B C D
+2 X B C D
+3 X B C D
+4 X B C D
+5 A B C D
+6 A B C D
+7 A B C D
+5A Seat assigned
+1 X B C D
+2 X B C D
+3 X B C D
+4 X B C D
+5 X B C D
+6 A B C D
+7 A B C D
+6A Seat assigned
+1 X B C D
+2 X B C D
+3 X B C D
+4 X B C D
+5 X B C D
+6 X B C D
+7 A B C D
+1A Seat not available
+1 X B C D
+2 X B C D
+3 X B C D
+4 X B C D
+5 X B C D
+6 X B C D
+7 A B C D
+7A Seat assigned
+1 X B C D
+2 X B C D
+3 X B C D
+4 X B C D
+5 X B C D
+6 X B C D
+7 X B C D
+2B Seat assigned
+1 X B C D
+2 X X C D
+3 X B C D
+4 X B C D
+5 X B C D
+6 X B C D
+7 X B C D
+2C Seat assigned
+1 X B C D
+2 X X X D
+3 X B C D
+4 X B C D
+5 X B C D
+6 X B C D
+7 X B C D
+2D Seat assigned
+1 X B C D
+2 X X X X
+3 X B C D
+4 X B C D
+5 X B C D
+6 X B C D
+7 X B C D
+7D Seat assigned
+1 X B C D
+2 X X X X
+3 X B C D
+4 X B C D
+5 X B C D
+6 X B C D
+7 X B C X
+exit
+
+ */
 

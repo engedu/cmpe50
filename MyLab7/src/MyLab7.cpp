@@ -32,7 +32,7 @@ char* delete_repeats(const char letters[], int size);
 int main()
 {
 
-//	auto_test();
+	auto_test();
 	exercise_2();
 
 	return 0;

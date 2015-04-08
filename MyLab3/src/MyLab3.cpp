@@ -35,9 +35,9 @@ void print_array(const int a[], int size);
 
 int main()
 {
-//	exercise_1();
+	exercise_1();
 	exercise_2();
-//	exercise_3();
+	exercise_3();
 
 	return 0;
 }

@@ -161,6 +161,8 @@ void StudentRecord::output(ostream& outs)
 
 
 void exercise_2() {
+
+	cout << "\nExercise 2\n";
 	cout << "declare counter_1 with count = 0, counter_2 with count = 10\n";
 	CounterType counter_1, counter_2(10);
 

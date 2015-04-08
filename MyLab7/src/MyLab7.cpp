@@ -26,13 +26,46 @@ private:
 };
 void exercise_1();
 void auto_test();
+void exercise_2();
+char* delete_repeats(const char letters[], int size);
 
 int main()
 {
 
-	auto_test();
+//	auto_test();
+	exercise_2();
 
 	return 0;
+}
+void exercise_2() {
+	cout << "exercise_2\n";
+	char str[100] = "to be or not to be";
+	int size = strlen(str);
+	char *noRepeat;
+	noRepeat = delete_repeats(str, size);
+	cout << noRepeat;
+
+}
+char* delete_repeats(const char letters[], int size) {
+	char *tmp = new char[size + 1];
+	tmp[0] = letters[0];
+	int k = 1;
+	for (int i = 1; i < size; i++) {
+		bool exist = false;
+		for (int j = 0; j < i; j++) {
+			if (letters[j] == letters[i]) {
+				exist = true;
+				break;
+			}
+		}
+		if (!exist) {
+			tmp[k] = letters[i];
+			k++;
+		}
+	}
+
+	tmp[k] = '\0';
+	return tmp;
 }
 
 void auto_test()
@@ -437,5 +470,8 @@ test_seat.txt
 7 X B C X
 exit
 
+
+exercise_2
+to bern
  */
 

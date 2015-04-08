@@ -20,23 +20,7 @@ void swap(int& a, int& b);
 void merge(int r[], int r_size, int a[], int a_size, int b[], int b_size);
 void print_array(const int a[], int size);
 
-void read_i() {
-	int a[10], input, i = 0;
-	while (i < 10) {
-		cin >> input;
-		if (cin.good()) {
-			a[i] = input;
-			i++;
-		} else {
-			cin.clear();
-			cout << "input" << endl;
-		}
-	}
-
-}
-
 int main() {
-//	read_i();
 
 	// infinite loop read user input, until get 3
 	while (true) {
@@ -145,16 +129,11 @@ void read_integers(int a[], int max_size, int& real_size) {
 	int input, i;
 	for (i = 0; i < max_size; i++) {
 		cin >> input;
-		if (cin.good()) {
-			if (input == -1) {
-				real_size = i;
-				return;
-			} else {
-				a[i] = input;
-			}
+		if (input == -1) {
+			real_size = i;
+			return;
 		} else {
-			cin.clear();
-			cout << "Please input a number" << endl;
+			a[i] = input;
 		}
 	}
 	real_size = i;

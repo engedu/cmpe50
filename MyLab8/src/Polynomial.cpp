@@ -34,6 +34,7 @@ Polynomial::Polynomial(int degr)
 
 Polynomial::Polynomial(const Polynomial &poly)
 {
+//	cout << "copy constructor\n";
 	degree = poly.get_degree();
 	coeff = new double[degree+1];
 	for (int i = 0; i <= degree; i++)
@@ -54,6 +55,7 @@ Polynomial::Polynomial(double cf[], int deg)
 
 Polynomial::~Polynomial()
 {
+//	cout << "destructor " << *this << " \n";
 	delete [] coeff;
 }
 
@@ -96,6 +98,7 @@ double Polynomial::evaluate(double val)
 // Assignment operator
 void Polynomial::operator =(const Polynomial &poly)
 {
+//	cout << "assignment operator overload\n";
 	if (this == &poly)
 	{
 		// Copy to itself. Nothing to be done.
@@ -115,6 +118,7 @@ void Polynomial::operator =(const Polynomial &poly)
 // Overloaded operator +
 Polynomial operator+(const Polynomial &pola, const Polynomial &polb)
 {
+	cout << "operator + \n";
 	int degA = pola.get_degree();
 	int degB = polb.get_degree();
 

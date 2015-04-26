@@ -6,6 +6,7 @@
  */
 
 #include "Complex.h"
+#include <cmath>
 Complex::Complex() :
 		real(0), imaginary(0)
 {
@@ -62,21 +63,33 @@ istream& operator >> (istream& in, Complex& com)
 	char plus;
 	in >> r;
 
-
 	in >> plus;
-
 
 	in >> i;
 
 	com.real = r;
-	com.imaginary = i;
+	if (plus == '-') {
+		com.imaginary = -i;
+	} else {
+		com.imaginary = i;
+	}
+
+	in >> plus; // *
+	in >> plus; // i
 
 	return in;
 }
 
 ostream& operator <<(ostream& out, const Complex& com)
 {
-	out << com.real << " + " << com.imaginary << " * i" << endl;
+	out << com.real;
+	if (com.imaginary > 0) {
+		out << " + " << com.imaginary;
+	} else {
+		out << " - " << fabs(com.imaginary);
+	}
+	out << " * i" << endl;
+
 	return out;
 }
 

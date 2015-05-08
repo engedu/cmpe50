@@ -9,8 +9,12 @@
 #include "figure.h"
 #include "circle.h"
 #include "triangle.h"
+#include "administrator.h"
 
 using namespace std;
+
+void exercise_1();
+void exercise_2();
 
 void myDraw(Figure *fig)
 {
@@ -20,6 +24,27 @@ void myDraw(Figure *fig)
 }
 
 int main(){
+
+	exercise_1();
+
+//	exercise_2();
+
+	return 0;
+
+}
+
+
+void exercise_1()
+{
+
+	Administrator admin;
+	admin.input(cin);
+	admin.print_check();
+
+}
+
+void exercise_2()
+{
 	Figure *fig;
 	Triangle *tri = new Triangle;
 
@@ -38,12 +63,38 @@ int main(){
 
 	myDraw(cir);
 
-	return 0;
-
 }
 
 
 /* output
+
+exercise 1
+
+Please input name:
+Chris
+Please input ssn:
+1234567
+Please input title:
+engineer
+Please input responsibility:
+develop
+Please input supervisor:
+mananger
+Please input salary:
+10000
+
+__________________________________________________
+Pay to the order of Chris
+The sum of 10000 Dollars
+_________________________________________________
+Check Stub NOT NEGOTIABLE
+Employee Number: 1234567
+Salaried Employee. Regular Pay: 10000
+_________________________________________________
+
+
+
+exercise 2
 =========================no virtual=========================
 Figure::draw()
 

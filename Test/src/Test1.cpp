@@ -10,12 +10,44 @@
 using namespace std;
 //	const int size = 9;
 
+
+class Tata
+{
+public:
+	~Tata() {
+		cout << "Tata gone!";
+	}
+};
+
+class Bye : public Tata
+{
+public:
+	~Bye() {
+		cout << "Bye gone!";
+	}
+};
+
+void testTataBye() {
+//	Tata *pTata = new Bye;
+//	delete pTata;
+
+	Bye *pBye = new Bye;
+	delete pBye;
+}
+
 void testvector() {
-	vector<int> v(10);
+//	vector<int> v(10);
+//
+//	v.push_back(1);
+//	cout << v.size();
 
-	v.push_back(1);
-	cout << v.size();
-
+	vector<int> vec1;
+	vec1.push_back(2);
+	cout << vec1.capacity() << endl;
+	vec1.reserve(vec1.capacity() + 1);
+	cout << vec1.capacity() << endl;
+	int i = vec1[0];
+	cout << i << endl;
 }
 
 void testStringP() {
@@ -37,8 +69,9 @@ void negative_array()
 
 int main()
 {
+	testTataBye();
 //	testvector();
-	testStringP();
+//	testStringP();
 //	double f_variable;
 //	get_input(f_variable);
 //	cout << f_variable << endl;
